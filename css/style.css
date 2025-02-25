@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+input,
+button,
+textarea {
+  background-color: #fff;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+.section__heading {
+  position: relative;
+  z-index: 5;
+  color: transparent;
+  font-size: clamp(5rem, 10vw, 15rem);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+.section__heading::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  z-index: -1;
+  background: linear-gradient(45deg, #ff0, #0f0, #f00, #00f, #0f0);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.section__heading::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom, #333 0%, #333 50%, #111 50%, #111 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
